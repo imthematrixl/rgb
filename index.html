@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button class="btn btn-b">blue</button>
+        <button class="btn btn-g">green</button>
+        <button class="btn btn-r">red</button>
+        <style>
+
+.btn {
+                padding: 30px 45px;
+                margin-bottom: 10px ;
+                background: var(--color);
+                cursor: pointer;
+            }
+            .btn-b{--color: rgb(0, 8, 255);}
+            .btn-g{--color: rgb(0, 201, 44);}
+            .btn-r{--color: rgb(255, 0, 25);}
+        </style>
+        <script>
+            const btns = document.getElementsByClassName("btn");
+            for (const btn of btns) {btn.addEventListener("click" , function(){
+                const buttonStyle = getComputedStyle(this);
+            const buttonBackgroundcolor = buttonStyle["backgroundColor"];
+        document.body.style.backgroundColor = buttonBackgroundcolor            })}       
+     </script>
+    </body>
+
+</html>
+
